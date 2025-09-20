@@ -1,0 +1,14 @@
+  <link rel="shortcut icon" type="image/x-icon" href="frontend-assets/images/logo/favicon.ico">
+  <link rel="stylesheet" href="{{ asset('frontend-assets/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend-assets/css/animate.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend-assets/css/icofont.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend-assets/css/modal-video.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend-assets/css/odometer.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend-assets/css/magnific-popup.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend-assets/css/jquery-ui.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend-assets/css/nice-select.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend-assets/css/animate-headline.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend-assets/css/swiper-bundle.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend-assets/css/slick.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend-assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('frontend-assets/css/admin.css') }}">

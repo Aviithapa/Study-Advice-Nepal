@@ -1,0 +1,111 @@
+<?php
+
+namespace App\Http\Controllers\Website;
+
+use App\Enums\PostTypeEnum;
+use Illuminate\Support\Facades\Cache;
+use App\Models\Post;
+use Illuminate\Http\Request;
+
+class HomeController extends BaseController
+{
+    private $viewData;
+
+    public function index(Request $request, $slug = null)
+    {
+        $slug = $slug ? $slug : 'index';
+        $this->viewData['banner'] = Cache::rememberForever('page.banner', function () {
+            return Post::where('type', PostTypeEnum::BANNER->value)->first();
+        });
+        $this->viewData['about'] = Cache::rememberForever('posts_list', function () {
+            return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'about-study-advice-nepal')->first();
+        });
+        $this->viewData['services'] = Cache::rememberForever('services_list', function () {
+            return Post::where('type', PostTypeEnum::SERVICE->value)->get();
+        });
+        $this->viewData['destinations'] = Cache::rememberForever('destinations_list', function () {
+            return Post::where('type', PostTypeEnum::DESTINATION->value)->get();
+        });
+        $this->viewData['testimonials'] = Cache::rememberForever('testimonials_list', function () {
+            return Post::where('type', PostTypeEnum::TESTIMONIAL->value)->get();
+        });
+        $this->viewData['teams'] = Cache::rememberForever('teams_list', function () {
+            return Post::where('type', PostTypeEnum::TEAM->value)->get();
+        });
+        $this->viewData['partners'] = Cache::rememberForever('partners_list', function () {
+            return Post::where('type', PostTypeEnum::PARTNER->value)->get();
+        });
+        return view('website.pages.' . $slug, $this->viewData);
+    }
+
+    public function slug(Request $request, $slug = null)
+    {
+        $slug = $slug ? $slug : 'index';
+        $file_path = resource_path() . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . 'website/pages' . DIRECTORY_SEPARATOR . $slug . '.blade.php';
+        if (file_exists($file_path)) {
+            switch ($slug) {
+                case 'about':
+                    $this->viewData['about'] = Cache::rememberForever('posts_list', function () {
+                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'about-study-advice-nepal')->first();
+                    });
+                    $this->viewData['services'] = Cache::rememberForever('services_list', function () {
+                        return Post::where('type', PostTypeEnum::SERVICE->value)->get();
+                    });
+                    $this->viewData['destinations'] = Cache::rememberForever('destinations_list', function () {
+                        return Post::where('type', PostTypeEnum::DESTINATION->value)->get();
+                    });
+                    $this->viewData['testimonials'] = Cache::rememberForever('testimonials_list', function () {
+                        return Post::where('type', PostTypeEnum::TESTIMONIAL->value)->get();
+                    });
+                    $this->viewData['teams'] = Cache::rememberForever('teams_list', function () {
+                        return Post::where('type', PostTypeEnum::TEAM->value)->get();
+                    });
+                    $this->viewData['partners'] = Cache::rememberForever('partners_list', function () {
+                        return Post::where('type', PostTypeEnum::PARTNER->value)->get();
+                    });
+                    break;
+                case 'contact':
+                    $this->viewData['partners'] = Cache::rememberForever('partners_list', function () {
+                        return Post::where('type', PostTypeEnum::PARTNER->value)->get();
+                    });
+                    break;
+            }
+            return view('website.pages.' . $slug, $this->viewData);
+        }
+        return view('errors.404');
+    }
+
+    public function destination(Request $request, $slug = null)
+    {
+        if (!$slug) {
+            return view('errors.404');
+        }
+
+        $this->viewData['destination'] = Cache::rememberForever('destination_' . $slug, function () use ($slug) {
+            return Post::where('type', PostTypeEnum::DESTINATION->value)->where('slug', $slug)->first();
+        });
+
+        if (!$this->viewData['destination']) {
+            return view('errors.404');
+        }
+
+        return view('website.pages.destinations', $this->viewData);
+    }
+
+    public function service(Request $request, $slug = null)
+    {
+        if (!$slug) {
+            return view('errors.404');
+        }
+
+        $this->viewData['service'] = Cache::rememberForever('service_' . $slug, function () use ($slug) {
+            return Post::where('type', PostTypeEnum::SERVICE->value)->where('slug', $slug)->first();
+        });
+
+        if (!$this->viewData['service']) {
+            return view('errors.404');
+        }
+
+        return view('website.pages.services', $this->viewData);
+    }
+}
