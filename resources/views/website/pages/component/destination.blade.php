@@ -20,11 +20,8 @@
                                 background-position: top center;">
                          <div class="facility-img-area"></div>
                          <div class="facility-card-txt d-flex flex-column align-items-center text-center p-50 px-50">
-                             {{-- <div class="facility-icon facility-icon-minus-top mb-30">
-                                    <img src="assets/images/facility-icon-1.png" alt="icon">
-                                </div> --}}
                              <h3 class="facility-title mt--2 mb-20"><a
-                                     href="class-details.html">{{ $destination->title }}</a>
+                                     href="/destination/{{ $destination->slug }}">{{ $destination->title }}</a>
                              </h3>
                          </div>
                      </div>

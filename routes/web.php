@@ -10,6 +10,7 @@ require __DIR__ . '/backend.php';
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/destination/{slug}', [HomeController::class, 'destination']);
 Route::get('/service/{slug}', [HomeController::class, 'service']);
+Route::get('/blog/{slug}', [HomeController::class, 'blog']);
 
 Route::get('/{slug}', [HomeController::class, 'slug']);
 Route::fallback(function () {

@@ -12,6 +12,7 @@ enum PostTypeEnum: string
     case FEATURE = 'feature';
     case TEAM = 'team';
     case PARTNER = 'partner';
+    case BLOG = 'blog';
 
     public function label(): string
     {
@@ -23,7 +24,8 @@ enum PostTypeEnum: string
             self::TESTIMONIAL => 'Testimonial',
             self::FEATURE => 'feature',
             self::TEAM => 'team',
-            self::PARTNER => 'partner'
+            self::PARTNER => 'partner',
+            self::BLOG => 'blog'
         };
     }
 }

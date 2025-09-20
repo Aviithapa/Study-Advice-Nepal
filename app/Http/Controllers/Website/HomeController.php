@@ -35,12 +35,34 @@ class HomeController extends BaseController
         $this->viewData['partners'] = Cache::rememberForever('partners_list', function () {
             return Post::where('type', PostTypeEnum::PARTNER->value)->get();
         });
+        $this->viewData['blogs'] = Cache::rememberForever('blogs_list', function () {
+            return Post::where('type', PostTypeEnum::BLOG->value)->get();
+        });
+        $this->viewData['features'] = Cache::rememberForever('features_list', function () {
+            return Post::where('type', PostTypeEnum::FEATURE->value)->get();
+        });
+        $this->viewData['welcome'] = Cache::rememberForever('posts_list_welcome', function () {
+            return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'welcome-to-our-study-advice-nepal')->first();
+        });
+        $this->viewData['teamTitle'] = Cache::rememberForever('teams_title', function () {
+            return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'meet-our-teams')->first();
+        });
+        $this->viewData['blogTitle'] = Cache::rememberForever('blogs_title', function () {
+            return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'our-latest-blogs')->first();
+        });
+        $this->viewData['footer'] = Cache::rememberForever('footer_title', function () {
+            return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
+        });
+
         return view('website.pages.' . $slug, $this->viewData);
     }
 
     public function slug(Request $request, $slug = null)
     {
         $slug = $slug ? $slug : 'index';
+        $this->viewData['footer'] = Cache::rememberForever('footer_title', function () {
+                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
+                    });
         $file_path = resource_path() . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . 'website/pages' . DIRECTORY_SEPARATOR . $slug . '.blade.php';
         if (file_exists($file_path)) {
             switch ($slug) {
@@ -63,6 +85,21 @@ class HomeController extends BaseController
                     $this->viewData['partners'] = Cache::rememberForever('partners_list', function () {
                         return Post::where('type', PostTypeEnum::PARTNER->value)->get();
                     });
+                    $this->viewData['features'] = Cache::rememberForever('features_list', function () {
+                        return Post::where('type', PostTypeEnum::FEATURE->value)->get();
+                    });
+                    $this->viewData['welcome'] = Cache::rememberForever('posts_list_welcome', function () {
+                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'welcome-to-our-study-advice-nepal')->first();
+                    });
+                    $this->viewData['teamTitle'] = Cache::rememberForever('teams_title', function () {
+                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'meet-our-teams')->first();
+                    });
+                    $this->viewData['blogTitle'] = Cache::rememberForever('blogs_title', function () {
+                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'our-latest-blogs')->first();
+                    });
+                    $this->viewData['footer'] = Cache::rememberForever('footer_title', function () {
+                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
+                    });
                     break;
                 case 'contact':
                     $this->viewData['partners'] = Cache::rememberForever('partners_list', function () {
@@ -80,6 +117,9 @@ class HomeController extends BaseController
         if (!$slug) {
             return view('errors.404');
         }
+        $this->viewData['footer'] = Cache::rememberForever('footer_title', function () {
+                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
+                    });
 
         $this->viewData['destination'] = Cache::rememberForever('destination_' . $slug, function () use ($slug) {
             return Post::where('type', PostTypeEnum::DESTINATION->value)->where('slug', $slug)->first();
@@ -97,6 +137,9 @@ class HomeController extends BaseController
         if (!$slug) {
             return view('errors.404');
         }
+        $this->viewData['footer'] = Cache::rememberForever('footer_title', function () {
+                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
+                    });
 
         $this->viewData['service'] = Cache::rememberForever('service_' . $slug, function () use ($slug) {
             return Post::where('type', PostTypeEnum::SERVICE->value)->where('slug', $slug)->first();
@@ -107,5 +150,25 @@ class HomeController extends BaseController
         }
 
         return view('website.pages.services', $this->viewData);
+    }
+
+    public function blog(Request $request, $slug = null)
+    {
+        if (!$slug) {
+            return view('errors.404');
+        }
+        $this->viewData['footer'] = Cache::rememberForever('footer_title', function () {
+                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
+                    });
+
+        $this->viewData['blog'] = Cache::rememberForever('blog_' . $slug, function () use ($slug) {
+            return Post::where('type', PostTypeEnum::BLOG->value)->where('slug', $slug)->first();
+        });
+
+        if (!$this->viewData['blog']) {
+            return view('errors.404');
+        }
+
+        return view('website.pages.blogs', $this->viewData);
     }
 }

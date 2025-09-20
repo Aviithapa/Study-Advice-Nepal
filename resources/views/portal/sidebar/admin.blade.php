@@ -119,6 +119,14 @@
                             <span>Partners Management</span>
                         </a>
                     </li>
+                    <li class="sidebar-list">
+                        <i class="fa-solid fa-thumbtack"></i>
+                        <a class="sidebar-link sidebar-title link-nav {{ request()->routeIs('blogs.*') ? 'active' : '' }}"
+                            href="{{ route('blogs.index') }}">
+                            <i data-feather="users" class="w-5 h-5 mr-3"></i>
+                            <span>Blog Management</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
 

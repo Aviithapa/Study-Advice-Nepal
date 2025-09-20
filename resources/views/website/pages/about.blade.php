@@ -26,69 +26,28 @@
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-8 col-md-10">
                     <div class="section-heading text-center mb-70">
-                        <h2 class="section-title mt--8 mb-15">Welcome to Our Kidba</h2>
-                        <p class="heading-sub-txt mt--1 mb--8">Here is what you can expect from a house cleaning from a
-                            Handy professional. Download the app to share further cleaning details and instructions!</p>
+                        <h2 class="section-title mt--8 mb-15">{{ $welcome->title }}</h2>
+                        <p class="heading-sub-txt mt--1 mb--8">{!! $welcome->content !!}</p>
                     </div>
                 </div>
             </div>
             <div class="row has-gradient-service">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="feature-card px-20 d-flex flex-column align-items-center mb-40">
-                        <div
-                            class="feature-icon bg-gradient-1 shadow-1 rounded-pill d-flex justify-content-center align-items-center mb-30">
-                            <img src="assets/images/feat-icon-8.png" alt="Icon">
-                        </div>
-                        <div class="feature-txt-2 text-center">
-                            <h3 class="feature-sub-title mt--7"><a href="class-details.html">Active Learning</a></h3>
-                            <div class="divider bg-gradient-1 rounded-pill mx-auto mb-20"></div>
-                            <p class="feature-txt-2 mt--6 mb--8">Since have been visonary relable sofware engnern partne
-                                have been and visionary</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="feature-card px-20 d-flex flex-column align-items-center mb-40">
-                        <div
-                            class="feature-icon bg-gradient-2 shadow-2 rounded-pill d-flex justify-content-center align-items-center mb-30">
-                            <img src="assets/images/feat-icon-10.png" alt="Icon">
-                        </div>
-                        <div class="feature-txt-2 text-center">
-                            <h3 class="feature-sub-title mt--7"><a href="staff.html">Parents Day</a></h3>
-                            <div class="divider bg-gradient-2 rounded-pill mx-auto mt--3 mb-20"></div>
-                            <p class="feature-txt-2 mt--6 mb--8">Since have been visonary relable sofware engnern partne
-                                have been and visionary</p>
+                @foreach ($features as $feature)
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="feature-card px-20 d-flex flex-column align-items-center mb-40">
+                            <div
+                                class="feature-icon bg-gradient-1 shadow-1 rounded-pill d-flex justify-content-center align-items-center mb-30">
+                                <img src="{{ $feature->getFirstMediaUrl('feature_image') }}" alt="Icon">
+                            </div>
+                            <div class="feature-txt-2 text-center">
+                                <h3 class="feature-sub-title mt--7"><a href="class-details.html">{{ $feature->title }}</a>
+                                </h3>
+                                <div class="divider bg-gradient-1 rounded-pill mx-auto mb-20"></div>
+                                <p class="feature-txt-2 mt--6 mb--8">{{ $feature->excerpt }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="feature-card px-20 d-flex flex-column align-items-center mb-40">
-                        <div
-                            class="feature-icon bg-gradient-3 shadow-3 rounded-pill d-flex justify-content-center align-items-center mb-30">
-                            <img src="assets/images/feat-icon-9.png" alt="Icon">
-                        </div>
-                        <div class="feature-txt-2 text-center">
-                            <h3 class="feature-sub-title mt--7"><a href="staff.html">Expert Teachers</a></h3>
-                            <div class="divider bg-gradient-3 rounded-pill mx-auto mt--3 mb-20"></div>
-                            <p class="feature-txt-2 mt--6 mb--8">Since have been visonary relable sofware engnern partne
-                                have been and visionary</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="feature-card px-20 d-flex flex-column align-items-center mb-40">
-                        <div
-                            class="feature-icon bg-gradient-4 shadow-4 rounded-pill d-flex justify-content-center align-items-center mb-30">
-                            <img src="assets/images/feat-icon-11.png" alt="Icon">
-                        </div>
-                        <div class="feature-txt-2 text-center">
-                            <h3 class="feature-sub-title mt--7"><a href="class-details.html">Music Lessons</a></h3>
-                            <div class="divider bg-gradient-4 rounded-pill mx-auto mt--3 mb-20"></div>
-                            <p class="feature-txt-2 mt--6 mb--8">Since have been visonary relable sofware engnern partne
-                                have been and visionary</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

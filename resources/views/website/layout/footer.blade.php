@@ -1,4 +1,7 @@
- <div class="footer">
+ <div class="footer"
+     style="background: url({{ $footer->getFirstMediaUrl('post_image') }}) center center no-repeat;
+    background-size: cover;
+}">
      <div class="container">
          <div class="footer-info">
              <div class="row g-0">
@@ -47,9 +50,8 @@
              <div class="row">
                  <div class="col-xl-4 col-lg-3 col-sm-6">
                      <div class="footer-card mb-50">
-                         <h4 class="footer-card-title mt--2 pb-20 mb-30">About Study Advice Nepal</h4>
-                         <p class="footer-card-txt text-white mt--6 mb-30 pr-30">Monotne deplos copertve chanva andng
-                             crorate Qhanin Unique Qnderwhe Premum Convere With Uheng Mutmed Cover</p>
+                         <h4 class="footer-card-title mt--2 pb-20 mb-30">{{ $footer->title }}</h4>
+                         <p class="footer-card-txt text-white mt--6 mb-30 pr-30">{!! $footer->content !!}</p>
                      </div>
                  </div>
                  <div class="col-xl-2 col-lg-3 col-sm-6">
