@@ -2,7 +2,9 @@
 
 @section('content')
     <!-- banner begin -->
-    <div class="banner breadcrumb-banner pt-190 pb-200">
+    <div class="banner breadcrumb-banner pt-190 pb-200"
+        style="    background: url({{ $blogBanner->getFirstMediaUrl('post_image') }}) bottom center no-repeat;
+    background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="col-12">

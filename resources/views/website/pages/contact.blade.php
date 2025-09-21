@@ -2,14 +2,16 @@
 
 @section('content')
     <!-- banner begin -->
-    <div class="banner breadcrumb-banner pt-190 pb-200">
+    <div class="banner breadcrumb-banner pt-190 pb-200"
+        style="background: url({{ $contactBanner->getFirstMediaUrl('post_image') }}) bottom center no-repeat;
+    background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="banner-txt">
                         <h1 class="breadcrumb-title">Contact Us</h1>
                         <div class="breadcrumb-txt">
-                            <a href="index.html">Home</a>
+                            <a href="/">Home</a>
                             <span class="dvdr"><i class="icofont-simple-right"></i></span>
                             <span>Contact</span>
                         </div>

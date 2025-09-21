@@ -2,14 +2,16 @@
 
 @section('content')
     <!-- banner begin -->
-    <div class="banner breadcrumb-banner pt-190 pb-200">
+    <div class="banner breadcrumb-banner pt-190 pb-200"
+        style="background: url({{ $aboutBanner->getFirstMediaUrl('post_image') }}) bottom center no-repeat;
+    background-size: cover;">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="banner-txt">
-                        <h1 class="breadcrumb-title">About Kidba</h1>
+                        <h1 class="breadcrumb-title">About</h1>
                         <div class="breadcrumb-txt">
-                            <a href="index.html">Home</a>
+                            <a href="/">Home</a>
                             <span class="dvdr"><i class="icofont-simple-right"></i></span>
                             <span>About</span>
                         </div>
@@ -57,58 +59,22 @@
 
     @include('website.pages.component.team')
 
-    <!-- counter begin -->
-    <div class="counter-inner pt-120 pb-80">
+    <!-- app download begin -->
+    <div class="app-download-2 p-120"
+        style="background: url({{ $joinUs->getFirstMediaUrl('post_image') }})  center no-repeat;
+    background-size: cover;">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-6">
-                    <div class="counter-box d-flex flex-column align-items-center mb-40">
-                        <div class="counter-img-2 mb-40">
-                            <img src="assets/images/counter-icon-5.png" alt="Icon">
-                        </div>
-                        <div class="counter-part-txt text-center p-relative">
-                            <h2 class="counter-txt odometer mb-15" data-count="2500">0</h2>
-                            <p class="counter-sub-txt mb-0">Students Enrolled</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="counter-box d-flex flex-column align-items-center mb-40">
-                        <div class="counter-img-2 mb-40">
-                            <img src="assets/images/counter-icon-6.png" alt="Icon">
-                        </div>
-                        <div class="counter-part-txt text-center p-relative">
-                            <h2 class="counter-txt odometer mb-15" data-count="912">0</h2>
-                            <p class="counter-sub-txt mb-0">Best Awards Won</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="counter-box d-flex flex-column align-items-center mb-40">
-                        <div class="counter-img-2 mb-40">
-                            <img src="assets/images/counter-icon-7.png" alt="Icon">
-                        </div>
-                        <div class="counter-part-txt text-center p-relative">
-                            <h2 class="counter-txt odometer mb-15" data-count="370">0</h2>
-                            <p class="counter-sub-txt mb-0">Classes Completed</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
-                    <div class="counter-box d-flex flex-column align-items-center mb-40">
-                        <div class="counter-img-2 mb-40">
-                            <img src="assets/images/counter-icon-8.png" alt="Icon">
-                        </div>
-                        <div class="counter-part-txt text-center p-relative">
-                            <h2 class="counter-txt odometer mb-15" data-count="648">0</h2>
-                            <p class="counter-sub-txt mb-0">Our Total Courses</p>
-                        </div>
-                    </div>
+            <div class="row justify-content-between align-items-center">
+                <div class="col-xl-5 col-lg-6 col-sm-8">
+                    <h2 class="section-title mt--8 mb-25 text-white cd-headline rotate-1">
+                        {{ $joinUs->title }}
+                    </h2>
+                    <p class="app-download-txt text-white mt--2 mb-50">{!! $joinUs->content !!}</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- counter end -->
+    <!-- app download end -->
 
     @include('website.pages.component.partner')
 @endsection

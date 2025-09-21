@@ -135,11 +135,7 @@
                          </div>
                      </nav>
                  </div>
-                 <div class="col-xl-2 col-lg-3 d-lg-block d-none">
-                     <div class="nav-btn d-flex justify-content-end">
-                         <a href="signup.html" class="def-btn">admit now</a>
-                     </div>
-                 </div>
+
              </div>
          </div>
      </div>

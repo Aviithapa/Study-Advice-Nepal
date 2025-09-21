@@ -61,8 +61,8 @@ class HomeController extends BaseController
     {
         $slug = $slug ? $slug : 'index';
         $this->viewData['footer'] = Cache::rememberForever('footer_title', function () {
-                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
-                    });
+            return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
+        });
         $file_path = resource_path() . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . 'website/pages' . DIRECTORY_SEPARATOR . $slug . '.blade.php';
         if (file_exists($file_path)) {
             switch ($slug) {
@@ -100,10 +100,20 @@ class HomeController extends BaseController
                     $this->viewData['footer'] = Cache::rememberForever('footer_title', function () {
                         return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
                     });
+                    $this->viewData['aboutBanner'] = Cache::rememberForever('about_banner', function () {
+                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'about-page')->first();
+                    });
+                    $this->viewData['joinUs'] = Cache::rememberForever('join-us', function () {
+                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'join-us')->first();
+                    });
+
                     break;
                 case 'contact':
                     $this->viewData['partners'] = Cache::rememberForever('partners_list', function () {
                         return Post::where('type', PostTypeEnum::PARTNER->value)->get();
+                    });
+                    $this->viewData['contactBanner'] = Cache::rememberForever('contact_banner', function () {
+                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'contact-page')->first();
                     });
                     break;
             }
@@ -118,8 +128,8 @@ class HomeController extends BaseController
             return view('errors.404');
         }
         $this->viewData['footer'] = Cache::rememberForever('footer_title', function () {
-                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
-                    });
+            return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
+        });
 
         $this->viewData['destination'] = Cache::rememberForever('destination_' . $slug, function () use ($slug) {
             return Post::where('type', PostTypeEnum::DESTINATION->value)->where('slug', $slug)->first();
@@ -128,6 +138,10 @@ class HomeController extends BaseController
         if (!$this->viewData['destination']) {
             return view('errors.404');
         }
+
+        $this->viewData['destinationBanner'] = Cache::rememberForever('destination_banner', function () {
+            return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'destination-page')->first();
+        });
 
         return view('website.pages.destinations', $this->viewData);
     }
@@ -138,8 +152,8 @@ class HomeController extends BaseController
             return view('errors.404');
         }
         $this->viewData['footer'] = Cache::rememberForever('footer_title', function () {
-                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
-                    });
+            return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
+        });
 
         $this->viewData['service'] = Cache::rememberForever('service_' . $slug, function () use ($slug) {
             return Post::where('type', PostTypeEnum::SERVICE->value)->where('slug', $slug)->first();
@@ -148,6 +162,10 @@ class HomeController extends BaseController
         if (!$this->viewData['service']) {
             return view('errors.404');
         }
+
+         $this->viewData['serviceBanner'] = Cache::rememberForever('service_banner', function () {
+            return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'service-page')->first();
+        });
 
         return view('website.pages.services', $this->viewData);
     }
@@ -158,8 +176,8 @@ class HomeController extends BaseController
             return view('errors.404');
         }
         $this->viewData['footer'] = Cache::rememberForever('footer_title', function () {
-                        return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
-                    });
+            return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
+        });
 
         $this->viewData['blog'] = Cache::rememberForever('blog_' . $slug, function () use ($slug) {
             return Post::where('type', PostTypeEnum::BLOG->value)->where('slug', $slug)->first();
@@ -168,6 +186,10 @@ class HomeController extends BaseController
         if (!$this->viewData['blog']) {
             return view('errors.404');
         }
+
+        $this->viewData['blogBanner'] = Cache::rememberForever('blog_banner', function () {
+            return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'blog-page')->first();
+        });
 
         return view('website.pages.blogs', $this->viewData);
     }
