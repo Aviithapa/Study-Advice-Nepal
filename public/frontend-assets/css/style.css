@@ -3432,12 +3432,12 @@ p.app-download-txt {
 }
 
 .facility-title {
-    font-size: 24px;
+    font-size: 36px;
     line-height: 1.2;
     font-weight: 600;
 }
 .facility-title a {
-    color: #000;
+    color: white;
 }
 .facility-title:hover a {
     color: #26468f;

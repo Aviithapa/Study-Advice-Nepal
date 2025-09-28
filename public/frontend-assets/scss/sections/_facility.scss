@@ -2,9 +2,8 @@
 ************
 *************************
 11. Facility
-******************************************************* 
+*******************************************************
 *************************************************************** */
-
 
 .facility {
     background: url(../images/facility-bg.jpg) center center no-repeat;
@@ -49,11 +48,11 @@
     justify-content: center;
 }
 .facility-title {
-    font-size: 24px;
+    font-size: 36px;
     line-height: 1.2;
     font-weight: 700;
     a {
-        color: $color-2;
+        color: white;
     }
     &:hover {
         a {
@@ -68,5 +67,5 @@
     animation-iteration-count: 1;
 }
 .single-client img {
-	width: 100%;
+    width: 100%;
 }

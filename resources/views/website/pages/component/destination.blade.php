@@ -15,12 +15,12 @@
              @foreach ($destinations as $destination)
                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                      <div class="facility-card facility-card-one mb-40"
-                         style="background: {{ $destination->getFirstMediaUrl('destination_image') }} center center no-repeat;
+                         style="background: url({{ $destination->getFirstMediaUrl('destination_image') }}) center center no-repeat;
                                 background-size: cover;
                                 background-position: top center;">
                          <div class="facility-img-area"></div>
-                         <div class="facility-card-txt d-flex flex-column align-items-center text-center p-50 px-50">
-                             <h3 class="facility-title mt--2 mb-20"><a
+                         <div class="facility-card-txt d-flex flex-column align-items-center text-center">
+                             <h3 class="facility-title"><a
                                      href="/destination/{{ $destination->slug }}">{{ $destination->title }}</a>
                              </h3>
                          </div>
