@@ -20,8 +20,6 @@
                                           <h3 class="feature-sub-title mt--7 mb--8"><a
                                                   href="class-details.html">{{ $feature->title }}</a></h3>
                                           <div class="divider mt-10 mb-20 bg-gradient-1 rounded-pill"></div>
-                                          <p class="mt--6 mb--8">{{ $feature->excerpt }}
-                                          </p>
                                       </div>
                                   </div>
                               </div>
