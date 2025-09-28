@@ -1,6 +1,8 @@
  <!-- about begin -->
  <div class="about pt-120 pb-120"
-     style="background: url({{ $about->getFirstMediaUrl('post_image') }}) bottom center no-repeat;     background-size: cover;">
+     style="background: url({{ $about->getFirstMediaUrl('post_image') }}) center center / cover no-repeat,
+            rgba(0, 0, 0, 0.4);
+            background-blend-mode: overlay;">
      <div class="container">
          <div class="row justify-content-end">
              <div class="col-xl-6 col-lg-7 col-md-8 col-sm-12">
