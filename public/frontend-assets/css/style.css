@@ -3383,7 +3383,7 @@ p.app-download-txt {
 *******************************************************
 *************************************************************** */
 .facility {
-    background: url(../images/facility-bg.jpg) center center no-repeat;
+    background-color: rgba(228, 240, 251, 0.4);
     background-size: cover;
 }
 
@@ -3413,6 +3413,7 @@ p.app-download-txt {
 
 .facility-img-area {
     min-height: 190px;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .facility-icon {
