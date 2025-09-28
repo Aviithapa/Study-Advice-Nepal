@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,600;0,800;1,300;1,400;1,500;1,600;1,600;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,600;0,900;1,100;1,300;1,400;1,500;1,600;1,900&display=swap");
 /*
 ************
 *************************
@@ -52,9 +52,11 @@ CSS INDEX
 *******************************************************
 *************************************************************** */
 body {
-    font-family: "Roboto", sans-serif;
-    color: #717171;
+    font-family: sans-serif;
+    color: #000;
     overflow-x: hidden;
+    background-color: rgba(242, 249, 255, 0.4);
+    letter-spacing: 0.5px;
 }
 
 html {
@@ -63,7 +65,7 @@ html {
 
 h1,
 h2 {
-    font-family: "Fredoka One", cursive;
+    font-family: sans-serif;
 }
 
 p {
@@ -1904,7 +1906,7 @@ textarea:focus::placeholder {
     line-height: 60px;
     background: linear-gradient(145deg, #45a6d9, #26468f);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     color: #fff;
     text-transform: uppercase;
     padding: 0 35px;
@@ -1960,10 +1962,16 @@ textarea:focus::placeholder {
 }
 
 .section-title {
-    font-size: 52px;
-    line-height: 1.2;
-    font-weight: 600;
-    color: #00394f;
+    font-size: 48px;
+    color: #000;
+    line-height: 57px;
+    font-weight: 700;
+    max-height: 2.8em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .paragraph-minus-margin {
@@ -2023,7 +2031,7 @@ textarea:focus::placeholder {
 }
 
 .color-9 {
-    color: #00394f;
+    color: #000;
 }
 
 .shadow-1 {
@@ -2185,6 +2193,8 @@ textarea:focus::placeholder {
 
 .bottom-header {
     box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+    background: #fff !important;
+    padding: 5px 0;
 }
 
 .navbar-nav ul.dropdown-menu li:not(:last-child) {
@@ -2239,8 +2249,8 @@ textarea:focus::placeholder {
     font-size: 14px;
     height: 20px;
     line-height: 21px;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
     text-transform: uppercase;
     position: relative;
 }
@@ -2256,7 +2266,7 @@ textarea:focus::placeholder {
 }
 .nav-link:hover,
 .nav-link:focus {
-    color: #00394f;
+    color: #000;
 }
 .nav-link:hover:after,
 .nav-link:focus:after {
@@ -2369,13 +2379,15 @@ textarea:focus::placeholder {
 .navbar-nav li a {
     text-transform: uppercase;
     font-size: 16px;
-    color: #00394f;
+    color: #000;
     padding: 10px 0;
-    font-weight: 700;
+    font-weight: 500;
     transition: 0.4s;
     transform-origin: left;
     display: inline-block;
+    letter-spacing: 0.18px;
 }
+
 .navbar-nav li a:hover {
     color: #26468f;
 }
@@ -2458,7 +2470,7 @@ textarea:focus::placeholder {
 }
 
 .breadcrumb-txt a {
-    font-weight: 700;
+    font-weight: 600;
 }
 .breadcrumb-txt a:hover {
     color: #26468f;
@@ -2613,8 +2625,8 @@ textarea:focus::placeholder {
 .feature-sub-title {
     font-size: 24px;
     line-height: 34px;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 
 .feature-sub-title-2 {
@@ -2637,7 +2649,7 @@ textarea:focus::placeholder {
     font-size: 152px;
     font-weight: 600;
     line-height: 1.1;
-    color: #00394f;
+    color: #000;
 }
 
 .r-gap-40 {
@@ -2789,10 +2801,10 @@ p.app-download-txt {
 
 .class-title {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
 }
 .class-title a {
-    color: #00394f;
+    color: #000;
 }
 .class-title:hover a {
     color: #26468f;
@@ -2979,9 +2991,9 @@ p.app-download-txt {
 
 .class-filter-btn {
     font-size: 16px;
-    color: #00394f;
+    color: #000;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
@@ -3010,13 +3022,13 @@ p.app-download-txt {
 }
 
 .course__view h4 {
-    color: #00394f;
+    color: #000;
     font-size: 16px;
     margin-bottom: 0;
 }
 
 .course__tab-btn li button {
-    color: #00394f;
+    color: #000;
     font-size: 16px;
     margin-right: 5px;
     padding: 5px 10px;
@@ -3028,13 +3040,13 @@ p.app-download-txt {
 }
 
 .course__tab-btn li button.active {
-    background-color: #00394f;
+    background-color: #000;
     color: #fff;
 }
 
 .course__sort-inner .nice-select {
     border: 0;
-    color: #00394f;
+    color: #000;
     padding-right: 33px;
 }
 
@@ -3047,7 +3059,7 @@ p.app-download-txt {
     width: 7px;
     height: 7px;
     border-width: 1px;
-    border-color: #00394f;
+    border-color: #000;
     right: 20px;
 }
 
@@ -3085,7 +3097,7 @@ p.app-download-txt {
     font-weight: 500;
     font-size: 16px;
     border: 2px solid #f6f6f6;
-    color: #00394f;
+    color: #000;
 }
 
 .basic-pagination ul li.active a {
@@ -3101,7 +3113,7 @@ p.app-download-txt {
 .link-btn {
     position: relative;
     font-size: 16px;
-    color: #00394f;
+    color: #000;
     font-weight: 500;
     display: inline-block;
 }
@@ -3276,10 +3288,10 @@ p.app-download-txt {
 .staff-name {
     font-size: 24px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
 }
 .staff-name a {
-    color: #00394f;
+    color: #000;
 }
 .staff-name:hover a {
     color: #26468f;
@@ -3342,7 +3354,7 @@ p.app-download-txt {
     width: 100%;
     height: 100%;
     content: "";
-    background-color: #00394f;
+    background-color: #000;
     opacity: 0.5;
     z-index: 1;
     transition: 0.4s;
@@ -3422,10 +3434,10 @@ p.app-download-txt {
 .facility-title {
     font-size: 24px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
 }
 .facility-title a {
-    color: #00394f;
+    color: #000;
 }
 .facility-title:hover a {
     color: #26468f;
@@ -3458,7 +3470,7 @@ p.app-download-txt {
 
 .gallery-filter-btn {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 100%;
     text-transform: uppercase;
     position: relative;
@@ -3513,7 +3525,7 @@ p.app-download-txt {
 .gallery-title {
     font-size: 24px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
 }
 .gallery-title:hover a {
     color: #26468f;
@@ -3577,7 +3589,7 @@ p.app-download-txt {
     font-size: 16px;
     line-height: 100%;
     padding-bottom: 15px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     color: #fff;
 }
@@ -3639,10 +3651,10 @@ p.app-download-txt {
 .blog-title {
     font-size: 24px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
 }
 .blog-title a {
-    color: #00394f;
+    color: #000;
 }
 .blog-title:hover a {
     color: #26468f;
@@ -3930,7 +3942,7 @@ p.app-download-txt {
 }
 
 .contact-info.kitba-contact {
-    background: #00394f;
+    background: #000;
     padding: 50px 40px;
     display: block;
 }
@@ -3994,13 +4006,13 @@ p.app-download-txt {
 .footer-info-txt {
     font-size: 19px;
     line-height: 100%;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .footer-card-title {
     font-size: 24px;
     line-height: 100%;
-    font-weight: 700;
+    font-weight: 600;
     color: #fff;
     position: relative;
 }
@@ -4120,8 +4132,8 @@ p.app-download-txt {
 .class-details-title {
     font-size: 48px;
     line-height: 1.2;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 
 .class-details-info {
@@ -4134,8 +4146,8 @@ p.app-download-txt {
 
 .class-comment-title {
     font-size: 24px;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
     line-height: 1.3;
 }
 
@@ -4160,8 +4172,8 @@ p.app-download-txt {
 .class-comment-username {
     font-size: 18px;
     line-height: 100%;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 
 .class-comment-actions {
@@ -4174,7 +4186,7 @@ p.app-download-txt {
 }
 
 .product-details-bottom-part .contact-form label {
-    color: #00394f;
+    color: #000;
     font-weight: 500;
 }
 
@@ -4193,8 +4205,8 @@ p.app-download-txt {
 
 .sidebar-title {
     font-size: 24px;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 
 .sidebar-search-box {
@@ -4265,8 +4277,8 @@ p.app-download-txt {
     display: block;
     font-size: 18px;
     line-height: 1.2;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
     transition: 0.3s;
 }
 .sidebar-class-title:hover {
@@ -4433,7 +4445,7 @@ span.subDropdown.plus:before {
 
 .class-details-teacher-name {
     font-size: 18px;
-    color: #00394f;
+    color: #000;
 }
 
 .about-class {
@@ -4449,8 +4461,8 @@ span.subDropdown.plus:before {
 *************************************************************** */
 .staff-details-title {
     font-size: 24px;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 
 .staff-position {
@@ -4463,7 +4475,7 @@ span.subDropdown.plus:before {
 }
 
 .staff-details-img img {
-    max-height: 700px;
+    max-height: 600px;
     object-fit: cover;
     object-position: top center;
 }
@@ -4570,8 +4582,8 @@ span.subDropdown.plus:before {
 .shop-card-title {
     font-size: 20px;
     line-height: 100%;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 .shop-card-title:hover {
     color: #26468f;
@@ -4594,7 +4606,7 @@ span.subDropdown.plus:before {
 .shop-card-price {
     font-size: 16px;
     line-height: 100%;
-    font-weight: 700;
+    font-weight: 600;
     color: #717171;
 }
 
@@ -4687,21 +4699,21 @@ span.subDropdown.plus:before {
 }
 
 .slick-arrow i {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .shop-details-product-title {
     font-size: 52px;
     line-height: 1.3;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 
 .shop-details-price {
     font-size: 24px;
     line-height: 100%;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
     margin-bottom: 0;
 }
 
@@ -4720,9 +4732,9 @@ span.subDropdown.plus:before {
     height: 50px;
     line-height: 50px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
-    color: #00394f;
+    color: #000;
     background: #e9e9e9;
     padding: 0 30px;
     margin-bottom: 10px;
@@ -4739,7 +4751,7 @@ span.subDropdown.plus:before {
 .product-information-list {
     font-size: 16px;
     line-height: 30px;
-    color: #00394f;
+    color: #000;
     border-bottom: 1px solid #e9e9e9;
 }
 .product-information-list:last-child {
@@ -4784,7 +4796,7 @@ span.subDropdown.plus:before {
     height: 60px;
     line-height: 60px;
     font-weight: 600;
-    color: #00394f;
+    color: #000;
     font-size: 18px;
 }
 .shop-details-cart-buttons .quantity-nav {
@@ -4799,7 +4811,7 @@ span.subDropdown.plus:before {
 
 .shop-details-category p strong {
     text-transform: uppercase;
-    color: #00394f;
+    color: #000;
     margin-right: 5px;
 }
 .shop-details-category p a {
@@ -4809,7 +4821,7 @@ span.subDropdown.plus:before {
     line-height: 30px;
     background-color: #e9e9e9;
     padding: 0 10px;
-    color: #00394f;
+    color: #000;
     border-radius: 3px;
     margin-right: 5px;
     margin-bottom: 10px;
@@ -4852,13 +4864,13 @@ span.subDropdown.plus:before {
 .panel-heading-txt {
     font-size: 24px;
     line-height: 70px;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 
 .checkout-label {
     font-weight: 500;
-    color: #00394f;
+    color: #000;
 }
 
 .checkout-form {
@@ -4944,9 +4956,9 @@ span.subDropdown.plus:before {
 .cart-table th {
     text-align: center;
     padding: 20px 15px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
-    color: #00394f;
+    color: #000;
     border-top: 0;
 }
 .cart-table td {
@@ -4969,8 +4981,8 @@ span.subDropdown.plus:before {
 .cart-product-title {
     font-size: 18px;
     line-height: 1.2;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 .cart-product-title:hover {
     color: #26468f;
@@ -4980,7 +4992,7 @@ span.subDropdown.plus:before {
     padding: 5px 0;
     font-size: 14px;
     line-height: 100%;
-    color: #00394f;
+    color: #000;
 }
 .cart-action-btn:hover,
 .cart-action-btn:focus {
@@ -5018,7 +5030,7 @@ span.subDropdown.plus:before {
     height: 40px;
     font-size: 16px;
     padding: 0;
-    color: #00394f;
+    color: #000;
     appearance: none;
 }
 
@@ -5039,7 +5051,7 @@ input[type="number"] {
 .cart-label {
     font-size: 16px;
     line-height: 100%;
-    color: #00394f;
+    color: #000;
     font-weight: 500;
 }
 
@@ -5062,8 +5074,8 @@ input[type="number"] {
 .panel-heading-txt-check {
     font-size: 24px;
     line-height: 70px;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px),
@@ -5095,8 +5107,8 @@ input[type="number"] {
 .blog-page-blog-title {
     font-size: 36px;
     line-height: 1.3;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 .blog-page-blog-title:hover,
 .blog-page-blog-title:focus {
@@ -5138,7 +5150,7 @@ input[type="number"] {
 .blog-img-txt {
     font-size: 22px;
     line-height: 1.3;
-    font-weight: 700;
+    font-weight: 600;
     color: #fff;
 }
 
@@ -5199,7 +5211,7 @@ input[type="number"] {
     }
 }
 .popular-post-title {
-    color: #00394f;
+    color: #000;
 }
 
 .blog-sidebar-box {
@@ -5215,8 +5227,8 @@ input[type="number"] {
 .blog-sidebar-title {
     font-size: 24px;
     line-height: 70px;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 
 .blog-search-form {
@@ -5326,7 +5338,7 @@ input[type="number"] {
     height: 40px;
     line-height: 38px;
     font-size: 16px;
-    color: #00394f;
+    color: #000;
     padding: 0 15px;
     border: 1px solid #e9e9e9;
     position: relative;
@@ -5372,8 +5384,8 @@ input[type="number"] {
 .admin-name {
     font-size: 20px;
     line-height: 100%;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
     display: block;
 }
 
@@ -5396,8 +5408,8 @@ input[type="number"] {
 .blog-panel-title h3 {
     font-size: 24px;
     line-height: 70px;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 
 .blog-single-comment {
@@ -5419,8 +5431,8 @@ input[type="number"] {
 .blog-comment-name {
     font-size: 18px;
     line-height: 100%;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 
 .blog-comment-date {
@@ -5431,8 +5443,8 @@ input[type="number"] {
 
 .blog-comment-reply {
     line-height: 100%;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
     margin-bottom: 15px;
 }
 .blog-comment-reply i {
@@ -5534,8 +5546,8 @@ h4.footer-info-txt a:hover {
 
 .blog-page-blog-single-title {
     font-size: 42px;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 
 .blog-quote-txt-p {
@@ -5603,8 +5615,8 @@ h4.footer-info-txt a:hover {
 *************************************************************** */
 .contact-page-title {
     font-size: 36px;
-    font-weight: 700;
-    color: #00394f;
+    font-weight: 600;
+    color: #000;
 }
 
 .contact-form {
@@ -5693,9 +5705,9 @@ h4.footer-info-txt a:hover {
 
 .contact-titletext {
     font-size: 39px;
-    color: #00394f;
+    color: #000;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .contact-subtext {
@@ -5705,7 +5717,7 @@ h4.footer-info-txt a:hover {
 .contact-info-wrapper ul li {
     display: flex;
     align-items: center;
-    color: #00394f;
+    color: #000;
     font-size: 20px;
 }
 .contact-info-wrapper ul li i {
@@ -5784,7 +5796,7 @@ h4.footer-info-txt a:hover {
     right: 0;
     top: 0;
     font-weight: 300;
-    color: #00394f;
+    color: #000;
     transition: 0.3s;
     transform: rotate(180deg);
 }
@@ -5861,7 +5873,7 @@ input.check-box {
 
 input.check-box[type="checkbox"]:checked {
     border: none;
-    background-color: #00394f;
+    background-color: #000;
     color: #fff;
 }
 
@@ -5898,7 +5910,7 @@ input.radio-box[type="radio"]:checked::before {
     left: 0;
     height: 18px;
     width: 18px;
-    background: #00394f;
+    background: #000;
     border-radius: 50%;
 }
 
@@ -5915,7 +5927,7 @@ input.radio-box[type="radio"]:checked::before {
 }
 
 .category-tags a:hover {
-    color: #00394f;
+    color: #000;
 }
 
 .sidebar-widget-wrapper {
@@ -5942,7 +5954,7 @@ input.radio-box[type="radio"]:checked::before {
 }
 
 .radio-star i.fas {
-    color: #00394f;
+    color: #000;
 }
 
 .shop-main-wrapper-head {
@@ -5966,7 +5978,7 @@ input.radio-box[type="radio"]:checked::before {
 }
 
 .sorting-type span {
-    color: #00394f;
+    color: #000;
 }
 
 .sorting-list span {
@@ -6017,7 +6029,7 @@ input.radio-box[type="radio"]:checked::before {
     }
 }
 .swowing-list span {
-    color: #00394f;
+    color: #000;
 }
 
 @media (min-width: 1400px) {
@@ -6123,7 +6135,7 @@ input.radio-box[type="radio"]:checked::before {
 
 .product-side-info .product-price {
     font-size: 20px;
-    color: #00394f;
+    color: #000;
     font-weight: 600;
 }
 
@@ -6168,7 +6180,7 @@ input.radio-box[type="radio"]:checked::before {
 }
 
 .product-details-nav .nav-item.active {
-    color: #00394f;
+    color: #000;
     font-weight: 600;
 }
 
@@ -6177,7 +6189,7 @@ input.radio-box[type="radio"]:checked::before {
     content: "";
     width: 0%;
     height: 1px;
-    background: #00394f;
+    background: #000;
     bottom: 0;
     left: 0;
     right: 0;
@@ -6189,7 +6201,7 @@ input.radio-box[type="radio"]:checked::before {
     content: "";
     width: 100%;
     height: 1px;
-    background: #00394f;
+    background: #000;
     bottom: 0;
     left: 0;
     right: 0;
@@ -6209,7 +6221,7 @@ input.radio-box[type="radio"]:checked::before {
 }
 
 .course-review-list span {
-    color: #00394f;
+    color: #000;
     margin-left: 10px;
     font-size: 14px;
     font-weight: 400;
@@ -6226,7 +6238,7 @@ input.radio-box[type="radio"]:checked::before {
 
 .comment-title h3 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 5px;
 }
 
@@ -6345,7 +6357,7 @@ input.radio-box[type="radio"]:checked::before {
 }
 
 .cart-area .table-content table td.product-name a:hover {
-    color: #00394f;
+    color: #000;
 }
 
 .cart-area .table-content table td {
@@ -6401,7 +6413,7 @@ input.radio-box[type="radio"]:checked::before {
 }
 
 .cart-area #coupon_code:focus {
-    border-color: #00394f;
+    border-color: #000;
 }
 
 .cart-area .coupon2 {
@@ -6464,7 +6476,7 @@ input.radio-box[type="radio"]:checked::before {
 }
 
 .cart-area .product-quantity-form:hover {
-    border-color: #00394f;
+    border-color: #000;
 }
 
 .cart-area .cart-plus,
@@ -6490,7 +6502,7 @@ input.radio-box[type="radio"]:checked::before {
 .cart-area .cart-plus:hover,
 .cart-area .cart-minus:hover {
     cursor: pointer;
-    color: #00394f;
+    color: #000;
     background: transparent;
 }
 
@@ -6532,7 +6544,7 @@ input.radio-box[type="radio"]:checked::before {
 
 .coupon-accordion h3 {
     background-color: #f6f6f6;
-    border-top: 3px solid #00394f;
+    border-top: 3px solid #000;
     font-size: 14px;
     font-weight: 400;
     margin: 0 0 25px;
@@ -6548,7 +6560,7 @@ input.radio-box[type="radio"]:checked::before {
     position: absolute;
     color: #575757;
     font-family: "Font Awesome 5 Pro";
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .coupon-accordion span {
@@ -6560,7 +6572,7 @@ input.radio-box[type="radio"]:checked::before {
 
 .coupon-accordion span:hover,
 p.lost-password a:hover {
-    color: #00394f;
+    color: #000;
 }
 
 .coupon-content {
@@ -6581,13 +6593,13 @@ p.lost-password a:hover {
 .coupon-info p.form-row-first label,
 .coupon-info p.form-row-last label {
     display: block;
-    color: #00394f;
+    color: #000;
 }
 
 .coupon-info p.form-row-first label span.required,
 .coupon-info p.form-row-last label span.required {
-    color: #00394f;
-    font-weight: 700;
+    color: #000;
+    font-weight: 600;
 }
 
 .coupon-info p.form-row-first input,
@@ -6607,7 +6619,7 @@ p.lost-password a:hover {
 
 .coupon-info p.form-row-first input:focus,
 .coupon-info p.form-row-last input:focus {
-    border-color: #00394f;
+    border-color: #000;
 }
 
 .coupon-info p.form-row input[type="submit"]:hover,
@@ -6636,7 +6648,7 @@ p.checkout-coupon input[type="submit"]:hover {
     display: inline-block;
     float: left;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     height: 40px;
     line-height: 40px;
     margin-right: 15px;
@@ -6696,14 +6708,14 @@ p.checkout-coupon input[type="text"]:focus {
 
 .country-select label,
 .checkout-form-list label {
-    color: #00394f;
+    color: #000;
     display: block;
     margin: 0 0 5px;
 }
 
 .country-select label span.required,
 .checkout-form-list label span.required {
-    color: #00394f;
+    color: #000;
 }
 
 .country-select .nice-select {
@@ -6725,7 +6737,7 @@ p.checkout-coupon input[type="text"]:focus {
 }
 
 .checkout-form-list label {
-    color: #00394f;
+    color: #000;
 }
 
 .checkout-form-list input[type="text"],
@@ -6826,8 +6838,8 @@ p.checkout-coupon input[type="text"]:focus {
     font-size: 24px;
     margin: 0 0 20px;
     width: 100%;
-    color: #00394f;
-    font-weight: 700;
+    color: #000;
+    font-weight: 600;
     line-height: 70px;
     padding: 0 40px;
 }
@@ -6863,7 +6875,7 @@ p.checkout-coupon input[type="text"]:focus {
 }
 .your-order-table table th {
     border-top: medium none;
-    color: #00394f;
+    color: #000;
     font-weight: 500;
     text-align: left;
     vertical-align: middle;
@@ -6895,7 +6907,7 @@ p.checkout-coupon input[type="text"]:focus {
 }
 
 .your-order-table table tr.order-total td span {
-    color: #00394f;
+    color: #000;
     font-size: 18px;
     font-weight: 500;
 }
@@ -6918,7 +6930,7 @@ p.checkout-coupon input[type="text"]:focus {
 .payment-method .accordion-button {
     font-size: 18px;
     font-weight: 400;
-    color: #00394f;
+    color: #000;
     padding: 23px 0;
     border: none;
 }
@@ -6946,7 +6958,7 @@ p.checkout-coupon input[type="text"]:focus {
 }
 
 .payment-method .accordion-button:not(.collapsed) {
-    color: #00394f;
+    color: #000;
     background-color: #fff;
     box-shadow: none;
 }
@@ -7354,7 +7366,7 @@ html .ui-button.ui-state-disabled:active {
 .product-pricing span {
     font-size: 15px;
     font-weight: 500;
-    color: #00394f;
+    color: #000;
     line-height: 1;
 }
 
@@ -7386,7 +7398,7 @@ html .ui-button.ui-state-disabled:active {
     position: absolute;
     right: 0;
     top: 20px;
-    color: #00394f;
+    color: #000;
 }
 
 .product-price-total {
@@ -7399,7 +7411,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .product-price-total span {
-    color: #00394f;
+    color: #000;
     font-weight: 500;
 }
 
@@ -7447,8 +7459,8 @@ html .ui-button.ui-state-disabled:active {
 
 .signup-body-title {
     font-size: 36px;
-    color: #00394f;
-    font-weight: 700;
+    color: #000;
+    font-weight: 600;
     line-height: 1.2;
 }
 
@@ -7457,12 +7469,12 @@ html .ui-button.ui-state-disabled:active {
     display: inline-block;
 }
 .signtext a:hover {
-    color: #00394f;
+    color: #000;
 }
 
 .sign-single-input label {
     font-size: 18px;
-    color: #00394f;
+    color: #000;
     margin-bottom: 10px;
 }
 
@@ -7547,7 +7559,7 @@ html .ui-button.ui-state-disabled:active {
 *************************************************************** */
 .error-title {
     font-size: 52px;
-    color: #00394f;
+    color: #000;
     margin-bottom: 15px;
     font-weight: 600;
     line-height: 1.2;
@@ -7781,7 +7793,7 @@ html .ui-button.ui-state-disabled:active {
     font-weight: 500;
     font-size: 16px;
     border: 2px solid #f6f6f6;
-    color: #00394f;
+    color: #000;
 }
 .simple-pagination li a:hover,
 .simple-pagination li span:hover {
@@ -8304,8 +8316,8 @@ html .ui-button.ui-state-disabled:active {
     }
 
     .bottom-header {
-        background: #fff;
-        padding: 30px 0;
+        background: #fff !important;
+        padding: 10px 0;
     }
 
     .nav-link:after {

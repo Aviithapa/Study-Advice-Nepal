@@ -69,7 +69,7 @@
                              <div class="logo">
                                  <a href="/">
                                      <img src="{{ site_logo('logo_image') }}"
-                                         alt="{{ site_setting('site_name', 'My Site') }}">
+                                         alt="{{ site_setting('site_name', 'My Site') }}" style="width: 60px;">
                                  </a>
                              </div>
                          </div>
@@ -86,7 +86,7 @@
                      <nav class="navbar navbar-expand-lg p-0">
                          <div class="container-fluid p-0">
                              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                 <ul class="navbar-nav m-auto p-30">
+                                 <ul class="navbar-nav m-auto">
                                      <li class="nav-item">
                                          <a href="/">
                                              Home

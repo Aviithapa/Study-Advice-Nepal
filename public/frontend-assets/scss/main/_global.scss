@@ -53,8 +53,8 @@ CSS INDEX
 
 body {
     font-family: $body-font;
-    color: $black;
     overflow-x: hidden;
+    background-color: $background;
 }
 html {
     scroll-behavior: smooth;

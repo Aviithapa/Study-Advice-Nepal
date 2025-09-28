@@ -57,6 +57,8 @@ class PostController extends PortalBaseController
 
         // Clear cache if needed
         Cache::forget('posts_list');
+        Cache::forget('posts_list_welcome');
+
 
         return redirect()->route('posts.index')->with('success', 'Post created successfully.');
     }
@@ -106,6 +108,7 @@ class PostController extends PortalBaseController
         }
 
         Cache::forget('posts_list');
+        Cache::forget('posts_list_welcome');
 
         return redirect()->route('posts.index')->with('success', 'Post updated successfully.');
     }

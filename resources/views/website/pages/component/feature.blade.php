@@ -2,7 +2,7 @@
   <div class="feature pt-120 pb-50">
       <div class="container">
           <div class="row align-items-center">
-              <div class="col-xl-8 col-lg-8">
+              <div class="col-xl-7 col-lg-7">
                   <div class="part-txt mb-70">
                       <div class="section-heading mb-70">
                           <h2 class="section-title mt--8 mb-25">{{ $welcome->title }}</h2>

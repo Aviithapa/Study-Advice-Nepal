@@ -2,27 +2,24 @@
 
 @section('content')
     <!-- banner begin -->
-    <div class="banner pt-185 pb-190"
-        style="background: url({{ $banner->getFirstMediaUrl('banner_image') }}) bottom center no-repeat;     background-size: cover;">
+    <div class="banner"
+        style="background: url({{ $banner->getFirstMediaUrl('banner_image') }}) center center no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-9 col-sm-11">
                     <div class="banner-txt">
-                        <h3 class="banner-subtitle mt--9 mb-10">{{ $banner->title }}</h3>
-                        <h1 class="banner-title mb-20 cd-headline push">
-                            {!! $banner->excerpt !!}
-                        </h1>
-                        <p class="banner-paragraph mb-11" style="max-width:500px;">
-                            {!! $banner->content !!}
-                        </p>
-                        <div class="btn-box sm-padd-btn pt-35">
-                            <a href="contact" class="def-btn btn-1">Contact Us</a>
-                        </div>
+                        <!-- Your text here -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- banner end -->
 
 
