@@ -17,10 +17,10 @@
         2.1 According CSS
         2.2 Alert CSS
         2.3 Avatars CSS
-        2.4 Badge CSS   
+        2.4 Badge CSS
         2.5 Bookmark CSS
         2.6 Breadcrumb CSS
-        2.7 Basic-card CSS      
+        2.7 Basic-card CSS
         2.8 Buttons CSS
         2.9 Block-ui CSS
         2.10 Card CSS
@@ -33,7 +33,7 @@
         2.17 Forms CSS
         2.18 Icons CSS
         2.19 List CSS
-        2.20 Loader CSS  
+        2.20 Loader CSS
         2.21 Modal CSS
         2.22 Popover CSS
         2.23 Print CSS
@@ -62,7 +62,7 @@
         3.8 Comingsoon CSS
         3.9 Contacts CSS
         3.10 Dashboard_2 CSS
-        3.11 Dashboard_3 CSS 
+        3.11 Dashboard_3 CSS
         3.12 Dashboard_4 CSS
         3.13 Dashboard_5 CSS
         3.14 Dashboard_6 CSS
@@ -58553,6 +58553,7 @@ table.table-bordered thead tr th p {
 }
 .page-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li a.active svg {
   transition: all 0.3s ease;
+  color: var(--theme-default);
 }
 .page-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li a.active svg.stroke-icon {
   stroke: var(--theme-default);
@@ -58943,7 +58944,7 @@ table.table-bordered thead tr th p {
   z-index: 9;
   height: auto;
   line-height: inherit;
-  background: #fff;
+  background: #000;
   width: 265px;
   text-align: left;
   transition: 0.3s;
@@ -59123,11 +59124,14 @@ table.table-bordered thead tr th p {
   vertical-align: -2px;
   float: none;
   transition: all 0.3s ease;
+  color:white;
 }
 .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a span {
   letter-spacing: 0.7px;
   text-transform: capitalize;
-  color: rgba(117, 117, 138, 0.8);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
 }
 .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links li a.link-nav .according-menu {
   display: none;
@@ -59346,6 +59350,7 @@ table.table-bordered thead tr th p {
   margin-bottom: 10px;
   background-color: #f1f0ff;
 }
+
 .page-wrapper.compact-wrapper .page-body-wrapper div.sidebar-wrapper .sidebar-main .sidebar-links .simplebar-wrapper .simplebar-mask .simplebar-content-wrapper .simplebar-content > li .sidebar-link.active::after {
   opacity: 1;
   visibility: visible;

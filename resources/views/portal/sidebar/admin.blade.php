@@ -16,7 +16,7 @@
             <a href="#"><img class="max-w-full h-auto" src="{{ asset('assets/images/logo/logo-icon.png') }}"
                     alt="" /></a>
         </div>
-        <nav class="sidebar-main">
+        <nav class="sidebar-main" style="border-top: 1px solid #fff;">
             <div class="left-arrow" id="left-arrow">
                 <i data-feather="arrow-left"></i>
             </div>
