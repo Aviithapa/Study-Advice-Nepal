@@ -9,6 +9,8 @@ use App\Enums\PostTypeEnum;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Support\Str;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Spatie\Image\Enums\Fit;
 
 class Post extends Model implements HasMedia
 {
@@ -35,13 +37,12 @@ class Post extends Model implements HasMedia
     /**
      * Optional: conversions for images (thumbnails, etc.)
      */
-    // public function registerMediaConversions(): void
-    // {
-    //     $this->addMediaConversion('thumb')
-    //         ->width(300)
-    //         ->height(300)
-    //         ->sharpen(10);
-    // }
+    public function registerMediaConversions(?Media $media = null): void
+    {
+        // Thumbnail for admin panels / previews
+        $this->addMediaConversion('thumb')->fit(Fit::Crop, 220, 110)->sharpen(10)->optimize();
+
+    }
 
     protected static function booted()
     {

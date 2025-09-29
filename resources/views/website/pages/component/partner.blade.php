@@ -4,7 +4,7 @@
          <div class="partner-slider">
              @foreach ($partners as $partner)
                  <div class="single-partner">
-                     <img src="{{ $partner->getFirstMediaUrl('partner_image') }}" class=" px-10"
+                     <img src="{{ $partner->getFirstMediaUrl('partner_image', 'thumb') }}" class=" px-10"
                          alt="{{ $partner->title }}">
                  </div>
              @endforeach

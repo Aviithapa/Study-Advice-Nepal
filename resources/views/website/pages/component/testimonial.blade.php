@@ -21,7 +21,7 @@
                                    <div class="quote-icon mb-30">
                                        <img src="{{ asset('frontend-assets/images/quote.png') }}" alt="“">
                                    </div>
-                                   <h2 class="feedback-title mt--3 mb-17">Students Says?</h2>
+                                   <h2 class="feedback-title mt--3 mb-17">Student Stories and Experiences</h2>
                                </div>
                                <p class="feedback-txt mb-25 text-white" style="color:white !important;">
                                    {!! $testimonial->content !!}</p>
