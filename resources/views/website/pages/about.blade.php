@@ -45,7 +45,6 @@
                                 <h3 class="feature-sub-title mt--7"><a href="class-details.html">{{ $feature->title }}</a>
                                 </h3>
                                 <div class="divider bg-gradient-1 rounded-pill mx-auto mb-20"></div>
-                                <p class="feature-txt-2 mt--6 mb--8">{{ $feature->excerpt }}</p>
                             </div>
                         </div>
                     </div>

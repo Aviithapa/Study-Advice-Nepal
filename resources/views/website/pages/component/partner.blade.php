@@ -1,6 +1,6 @@
  <style>
      .single-partner {
-         width: 150px;
+         width: 264px;
          height: 150px;
          display: flex;
          align-items: center;
@@ -15,7 +15,7 @@
      }
  </style>
  <!-- partner begin -->
- <div class="partner">
+ <div class="partner pt-10">
      <div class="container">
          <div class="partner-slider">
              @foreach ($partners as $partner)
