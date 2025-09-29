@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Portal;
 
 use App\Enums\PostTypeEnum;
 use App\Models\Post;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Cache;
@@ -81,30 +82,33 @@ class PartnerController extends PortalBaseController
      */
     public function update(Request $request, string $id)
     {
-        $partner = Post::where('type', PostTypeEnum::FEATURE->value)->findOrFail($id);
+        try {
+            $partner = Post::where('type', PostTypeEnum::PARTNER->value)->findOrFail($id);
 
-        $request->validate([
-            'title' => 'required|string|max:255|unique:posts,title,' . $partner->id,
-            'content' => 'required|string',
-            'excerpt' => 'nullable|string|max:500',
-            'image' => 'nullable|image|max:2048', // optional if updating
-        ]);
+            $request->validate([
+                'title' => 'required|string|max:255|unique:posts,title,' . $partner->id,
+                'content' => 'required|string',
+                'excerpt' => 'nullable|string|max:500',
+                'image' => 'nullable|image|max:2048', // optional if updating
+            ]);
 
-        $partner->update([
-            'title' => $request->title,
-            'slug' => Str::slug($request->title),
-            'content' => $request->content,
-            'excerpt' => $request->excerpt,
-        ]);
+            $partner->update([
+                'title' => $request->title,
+                'slug' => Str::slug($request->title),
+                'content' => $request->content,
+                'excerpt' => $request->excerpt,
+            ]);
 
-        if ($request->hasFile('image')) {
-            $partner->clearMediaCollection('partner_image');
-            $partner->addMediaFromRequest('image')->toMediaCollection('partner_image');
+            if ($request->hasFile('image')) {
+                $partner->clearMediaCollection('partner_image');
+                $partner->addMediaFromRequest('image')->toMediaCollection('partner_image');
+            }
+
+            Cache::forget('partners_list');
+            return redirect()->route('partners.index')->with('success', 'Partners updated successfully.');
+        } catch (Exception $e) {
+            dd($e);
         }
-
-        Cache::forget('partners_list');
-
-        return redirect()->route('partners.index')->with('success', 'Partners updated successfully.');
     }
 
     /**

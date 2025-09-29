@@ -34,15 +34,7 @@ class Post extends Model implements HasMedia
         $this->addMediaCollection('attachments'); // multiple files
     }
 
-    /**
-     * Optional: conversions for images (thumbnails, etc.)
-     */
-    public function registerMediaConversions(?Media $media = null): void
-    {
-        // Thumbnail for admin panels / previews
-        $this->addMediaConversion('thumb')->fit(Fit::Crop, 220, 110)->sharpen(10)->optimize();
 
-    }
 
     protected static function booted()
     {
