@@ -45,7 +45,7 @@ class SiteSetting extends Model
     {
         if (!Cache::has('setting.' . $name)) {
             $setting = self::where('name', $name)->first();
-            Cache::forever('setting.' . $name, $setting);
+            Cache::forever('setting' . $name, $setting);
             return $setting;
         } else {
             return Cache::get('setting.' . $name);

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Portal;
 use App\Http\Controllers\Controller;
 use App\Models\SiteSetting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class SiteSettingController extends PortalBaseController
 {
@@ -39,6 +40,7 @@ class SiteSettingController extends PortalBaseController
             }
 
             $setting->save();
+            Cache::forget('setting.' . $key);
         }
 
         return redirect()->back()->with('success', 'Settings updated successfully!');

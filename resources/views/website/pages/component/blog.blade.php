@@ -1,11 +1,10 @@
  <!-- blog begin -->
- <div class="latest-news pt-120 pb-80">
+ <div class="latest-news pt-50 pb-80">
      <div class="container">
          <div class="row justify-content-center">
              <div class="col-xl-7 col-lg-8 col-md-10">
-                 <div class="section-heading text-center mb-70">
+                 <div class="section-heading text-center">
                      <h2 class="section-title mt--9 mb-25">{{ $blogTitle->title }}</h2>
-                     <p class="heading-sub-txt mt--1 mb--8">{!! $blogTitle->content !!}</p>
                  </div>
              </div>
          </div>
