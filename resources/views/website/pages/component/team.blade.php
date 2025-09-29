@@ -1,9 +1,9 @@
   <!-- staff begin -->
-  <div class="our-staff pt-120 pb-80">
+  <div class="our-staff pt-50">
       <div class="container">
           <div class="row justify-content-center">
               <div class="col-xl-7 col-lg-8 col-md-10">
-                  <div class="section-heading text-center mb-70">
+                  <div class="section-heading text-center">
                       <h2 class="section-title mt--8 mb-25">{{ $teamTitle->title }}</h2>
                       <p class="heading-sub-txt mt--1 mb--8">{!! $teamTitle->content !!}</p>
                   </div>

@@ -1,5 +1,5 @@
   <!-- feature begin -->
-  <div class="feature pt-120 pb-50">
+  <div class="feature pt-50">
       <div class="container">
           <div class="row align-items-center">
               <div class="col-xl-7 col-lg-7">
@@ -18,7 +18,7 @@
                                       </div>
                                       <div class="feature-txt">
                                           <h3 class="feature-sub-title mt--7 mb--8"><a
-                                                  href="class-details.html">{{ $feature->title }}</a></h3>
+                                                  href="/facility/{{ $feature->slug }}">{{ $feature->title }}</a></h3>
                                           <div class="divider mt-10 mb-20 bg-gradient-1 rounded-pill"></div>
                                       </div>
                                   </div>

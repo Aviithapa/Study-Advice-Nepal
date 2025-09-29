@@ -1,5 +1,5 @@
  <!-- about begin -->
- <div class="about pt-120 pb-120"
+ <div class="about pt-50 pb-50"
      style="background: url({{ $about->getFirstMediaUrl('post_image') }}) center center / cover no-repeat,
             rgba(0, 0, 0, 0.4);
             background-blend-mode: overlay;">

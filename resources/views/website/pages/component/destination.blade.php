@@ -1,5 +1,5 @@
  <!-- facility begin -->
- <div class="facility pt-120 pb-80">
+ <div class="facility pt-50">
      <div class="container">
          <div class="row justify-content-center">
              <div class="col-xl-7 col-lg-8 col-md-10">

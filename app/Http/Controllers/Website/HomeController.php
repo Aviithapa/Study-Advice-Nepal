@@ -170,6 +170,30 @@ class HomeController extends BaseController
         return view('website.pages.services', $this->viewData);
     }
 
+     public function facility(Request $request, $slug = null)
+    {
+        if (!$slug) {
+            return view('errors.404');
+        }
+        $this->viewData['footer'] = Cache::rememberForever('footer_title', function () {
+            return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'study-advice-nepal-about')->first();
+        });
+
+        $this->viewData['facility'] = Cache::rememberForever('features' . $slug, function () use ($slug) {
+            return Post::where('type', PostTypeEnum::FEATURE->value)->where('slug', $slug)->first();
+        });
+
+        if (!$this->viewData['facility']) {
+            return view('errors.404');
+        }
+
+         $this->viewData['serviceBanner'] = Cache::rememberForever('service_banner', function () {
+            return Post::where('type', PostTypeEnum::POST->value)->where('slug', 'service-page')->first();
+        });
+
+        return view('website.pages.facility', $this->viewData);
+    }
+
     public function blog(Request $request, $slug = null)
     {
         if (!$slug) {
