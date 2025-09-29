@@ -37,12 +37,12 @@
                 @foreach ($features as $feature)
                     <div class="col-lg-3 col-sm-6">
                         <div class="feature-card px-20 d-flex flex-column align-items-center mb-40">
-                            <div
-                                class="feature-icon bg-gradient-1 shadow-1 rounded-pill d-flex justify-content-center align-items-center mb-30">
+                            <div class=" shadow-1 rounded-pill d-flex justify-content-center align-items-center mb-30">
                                 <img src="{{ $feature->getFirstMediaUrl('feature_image') }}" alt="Icon">
                             </div>
                             <div class="feature-txt-2 text-center">
-                                <h3 class="feature-sub-title mt--7"><a href="class-details.html">{{ $feature->title }}</a>
+                                <h3 class="feature-sub-title mt--7"><a
+                                        href="/facility/{{ $feature->slug }}">{{ $feature->title }}</a>
                                 </h3>
                                 <div class="divider bg-gradient-1 rounded-pill mx-auto mb-20"></div>
                             </div>
