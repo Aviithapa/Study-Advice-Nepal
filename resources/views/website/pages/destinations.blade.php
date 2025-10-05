@@ -3,7 +3,7 @@
 @section('content')
     <!-- banner begin -->
     <div class="banner breadcrumb-banner pt-190 pb-200"
-        style="background: url({{ $destinationBanner->getFirstMediaUrl('post_image') }}) bottom center no-repeat;
+        style="background: url({{ $destination->getFirstMediaUrl('destination_image') }}) bottom center no-repeat;
     background-size: cover;">
         <div class="container">
             <div class="row">
