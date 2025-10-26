@@ -1,14 +1,21 @@
  <!-- facility begin -->
- <div class="facility pt-50">
+ <div class="mt-150 mb-50">
      <div class="container">
-         <div class="row justify-content-center">
-             <div class="col-xl-7 col-lg-8 col-md-10">
+         <div class="row">
+             <div class="col-xl-12 col-lg-12 col-md-12">
                  <div class="section-heading text-center mb-60">
-                     <h2 class="section-title text-black mt--8 mb-10">Destinations</h2>
+                     <h2 class="section-title text-black mt--8 mb-10">Explore Top Destinations</h2>
+                     <p>
+                         Discover the world’s leading study destinations that combine academic excellence with cultural
+                         diversity. From the innovation-driven universities of the USA and Canada to the historic
+                         institutions of the UK and Europe, and the vibrant student life in Australia and Asia, each
+                         destination offers unique opportunities for personal and professional growth. Explore your
+                         options and find the perfect place to shape your global future.
+                     </p>
                  </div>
              </div>
          </div>
-         <div class="row justify-content-center">
+         <div class="row justify-content-center mt-50">
              @foreach ($destinations as $destination)
                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                      <div class="facility-card facility-card-one mb-40 "

@@ -5,6 +5,7 @@ use App\Http\Controllers\Portal\BlogController;
 use App\Http\Controllers\Portal\DashboardController;
 use App\Http\Controllers\Portal\DestinationsController;
 use App\Http\Controllers\Portal\FeaturesController;
+use App\Http\Controllers\Portal\PageController;
 use App\Http\Controllers\Portal\PartnerController;
 use App\Http\Controllers\Portal\PostController;
 use App\Http\Controllers\Portal\ServicesController;
@@ -27,4 +28,5 @@ Route::middleware(['auth'])
         Route::resource('teams', TeamsController::class);
         Route::resource('partners', PartnerController::class);
         Route::resource('blogs', BlogController::class);
+        Route::resource('pages', PageController::class);
     });

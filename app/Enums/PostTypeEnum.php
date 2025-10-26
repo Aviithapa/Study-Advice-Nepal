@@ -13,6 +13,8 @@ enum PostTypeEnum: string
     case TEAM = 'team';
     case PARTNER = 'partner';
     case BLOG = 'blog';
+    case PAGE = 'page';
+
 
     public function label(): string
     {
@@ -25,7 +27,8 @@ enum PostTypeEnum: string
             self::FEATURE => 'feature',
             self::TEAM => 'team',
             self::PARTNER => 'partner',
-            self::BLOG => 'blog'
+            self::BLOG => 'blog',
+            self::PAGE => 'page'
         };
     }
 }

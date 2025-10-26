@@ -25,20 +25,23 @@
 
     @include('website.pages.component.feature')
 
-    @include('website.pages.component.about')
-
-    @include('website.pages.component.service')
-
-
     @include('website.pages.component.destination')
 
+    {{-- @include('website.pages.component.service') --}}
 
-    @include('website.pages.component.team')
+    @include('website.pages.component.about')
 
 
 
 
-    @include('website.pages.component.testimonial')
+
+
+    {{-- @include('website.pages.component.team') --}}
+
+
+
+
+    {{-- @include('website.pages.component.testimonial') --}}
 
 
     @include('website.pages.component.blog')
